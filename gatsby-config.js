@@ -3,12 +3,16 @@ module.exports = {
   siteMetadata: {
     siteTitle: 'Running Page',
     siteUrl: 'http://running.zlei.cf',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
+    logo: 'https://lh3.googleusercontent.com/a-/AAuE7mDe04qHRzRtN4_sgKH--mIWB4yRPJl7hg05mnEJ=s100',
     description: 'Personal site and blog',
     navLinks: [
       {
         name: 'Blog',
         url: 'https://m0nkee.github.io',
+      },
+      {
+        name: 'Home',
+        url: 'http://zlei.cf',
       },
       {
         name: 'About',
