@@ -76,7 +76,7 @@ jobs:
       - name: Publish
         run: |
           echo "${{ secrets.SSHKEY }}" >> /tmp/sshkey
-          ssh -t -i /tmp/sshkey opc@158.101.89.237 "cd /home; ls"
+          ssh -t -t -i /tmp/sshkey opc@158.101.89.237 "cd /home; ls"
 
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.2.0
