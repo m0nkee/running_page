@@ -58,6 +58,8 @@ jobs:
           yarn build --prefix-paths
       - run: |
           cp -r assets/ public/static
+      - run: |
+          cp -r public/ deploy_pages
 
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.2.0
