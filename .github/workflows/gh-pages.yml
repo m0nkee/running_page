@@ -70,13 +70,14 @@ jobs:
         run: |
           git config --local user.email "${{ env.GITHUB_EMAIL }}"
           git config --local user.name "${{ env.GITHUB_NAME }}"
-          git commit -a -m 'update new pages' || echo "nothing to commit"
+          git add all
+          git commit  -m 'update new pages' || echo "nothing to commit"
           git push || echo "nothing to push"
 
-      - name: Publish
-        run: |
-          echo "${{ secrets.SSHKEY }}" >> /tmp/sshkey
-          ssh -t -t -i /tmp/sshkey opc@158.101.89.237 "cd /home; ls"
+      # - name: Publish
+      #   run: |
+      #     echo "${{ secrets.SSHKEY }}" >> /tmp/sshkey
+      #     ssh -t -t -i /tmp/sshkey opc@158.101.89.237 "cd /home; ls; exit;"
 
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.2.0
